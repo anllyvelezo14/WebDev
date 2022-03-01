@@ -7,13 +7,9 @@ const apiRouter = require('./routes/api');
 require('./db');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true}));
 
-app.use('/api', apiRouter);
-//Prueba
-// app.get('/', (req,res)=> {
-//     res.send('Hola mundo');
-// });
+app.use('/api',apiRouter);
 
 //Levantando la aplicacion
 app.listen(5000, () => {

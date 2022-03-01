@@ -1,7 +1,7 @@
 // const {Sequelize} = require("sequelize/types");
 
-module.exports = (Sequelize, type) => {
-    return Sequelize.define('usuarios',{
+module.exports = (sequelize, type) => {
+    return sequelize.define('usuario',{
         id:{
             type: type.INTEGER,
             primaryKey: true,
@@ -18,7 +18,7 @@ module.exports = (Sequelize, type) => {
         },
         email:{
             type: type.STRING,
-            allownull: true,
+            allownull: false,
         },
         phone: {
             type: type.INTEGER,
